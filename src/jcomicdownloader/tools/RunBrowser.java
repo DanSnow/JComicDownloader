@@ -23,14 +23,14 @@ import javax.swing.JLabel;
 *
 * @author Anthrax
 * 此類負責檢測系統的默認瀏覽器等程序，並負責啟動它們
-* @netSite 指定要顯示的網址
+* netSite 指定要顯示的網址
 */
 public class RunBrowser{
     private Desktop desktop;
     private URI uri;
     private String netSite;
     private Cursor hander;
-    
+
     /** Creates a new instance of DesktopRuner */
     public RunBrowser() {
         this.desktop = Desktop.getDesktop();
@@ -46,7 +46,7 @@ public class RunBrowser{
             return false;
         }
     }
-    
+
     /**
     *run default broswer, and open the page by urlString
     */
