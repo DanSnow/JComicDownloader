@@ -120,7 +120,6 @@ public class ParseEC extends ParseOnlineComicSite {
     beginIndex = allPageString.indexOf( "\'", beginIndex ) + 1;
     endIndex = allPageString.indexOf( "\'", beginIndex );
     String allcodes = allPageString.substring( beginIndex, endIndex );
-    Common.debugPrintln( "AllCodes: " + allcodes );
 
 
     decodePicUrl( itemid, allcodes, chs, ch );
@@ -152,9 +151,6 @@ public class ParseEC extends ParseOnlineComicSite {
     String num = subStringAndRemoveAlpha(code, 0, 4);
     String sid = subStringAndRemoveAlpha(code, 4, 2);
     String did = subStringAndRemoveAlpha(code, 6, 1);
-    Common.debugPrint("sid: " + sid + "\n");
-    Common.debugPrint("did: " + did + "\n");
-    Common.debugPrint("num: " + num + "\n");
     for (int p = 1;p <= totalPage;p++) {
       String img = "";
       if (p < 10) {
