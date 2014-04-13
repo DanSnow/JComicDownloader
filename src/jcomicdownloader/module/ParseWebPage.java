@@ -119,7 +119,8 @@ public class ParseWebPage
         //else if ( webSite.matches( "(?s).*\\.178.com(?s).*" ) )
         //    siteID = Site.ONE_SEVEN_EIGHT;
         else if ( webSite.matches( "(?s).*\\.8comic.com(?s).*" ) ||
-                  webSite.matches( "(?s).*\\.comicvip.com(?s).*") )
+                  webSite.matches( "(?s).*\\.comicvip.com(?s).*") ||
+                  webSite.matches("(?s).*8comic\\.com(?s).*") )
         {
             if ( webSite.matches( "(?s).*photo(?s).*" )
                     || webSite.matches( "(?s).*PHOTO(?s).*" )
@@ -190,12 +191,12 @@ public class ParseWebPage
         {
             siteID = Site.SIX_COMIC;
         }
-        else if ( webSite.matches( "(?s).*178.com(?s).*" ) || 
+        else if ( webSite.matches( "(?s).*178.com(?s).*" ) ||
                   webSite.matches( "(?s).*dmzj.com(?s).*" ) )
         {
             siteID = Site.MANHUA_178;
         }
-        else if ( webSite.matches( "(?s).*kangdm.com(?s).*" ) || 
+        else if ( webSite.matches( "(?s).*kangdm.com(?s).*" ) ||
                   webSite.matches( "(?s).*kyo.cn(?s).*" ) )
         {
             siteID = Site.KANGDM;
@@ -216,8 +217,8 @@ public class ParseWebPage
         {
             siteID = Site.DM5;
         }
-        else if ( webSite.matches( "(?s).*comic101.com(?s).*" ) || 
-                  webSite.matches( "(?s).*comic.101.com(?s).*" ) || 
+        else if ( webSite.matches( "(?s).*comic101.com(?s).*" ) ||
+                  webSite.matches( "(?s).*comic.101.com(?s).*" ) ||
                   webSite.matches( "(?s).*mh.ck101.com(?s).*" ) ||
                   webSite.matches( "(?s).*comic.ck101.com(?s).*" ) ||
                   webSite.matches( "(?s).*.com/vols/\\d+/\\d+(?s).*" ) // 應付全部ck101的位址....
@@ -389,7 +390,7 @@ public class ParseWebPage
         else
         {
             siteID = Site.UNKNOWN;
-            
+
             Common.debugPrintln( "有未知的位址:" + webSite);
             Flag.downloadErrorFlag = true;
         }
