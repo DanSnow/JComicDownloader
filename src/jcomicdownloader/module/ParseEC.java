@@ -166,7 +166,7 @@ public class ParseEC extends ParseOnlineComicSite {
       else {
         img = "" + p;
       }
-      int m = ((int)(p / 10) % 10) + (((p - 1) % 10) * 3);
+      int m = ((int)((p - 1) / 10) % 10) + (((p - 1) % 10) * 3);
       img += "_" + code.substring(m + 10, m + 13);
       comicURL[p - 1] =  "http://img" + sid + ".8comic.com/" + did +
                          "/" + itemid + "/" + num + "/" + img + ".jpg";
