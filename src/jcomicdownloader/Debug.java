@@ -14,6 +14,6 @@ package jcomicdownloader;
  * 除錯參數
  */
 public class Debug {
-    public static boolean debugMode = true;
-    public static boolean commandDebugMode = true; // true:cmd輸出  ;  false:logFrame輸出
+  public static boolean debugMode = true;
+  public static boolean commandDebugMode = true; // true:cmd輸出  ;  false:logFrame輸出
 }

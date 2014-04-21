@@ -15,13 +15,13 @@ package jcomicdownloader.enums;
  *
  * */
 public class ButtonEnum {
-    public static final int ADD = 0;
-    public static final int DOWNLOAD = 1;
-    public static final int STOP = 2;
-    public static final int UP = 3;
-    public static final int DOWN = 4;
-    public static final int CLEAR = 5;
-    public static final int OPTION = 6;
-    public static final int INFORMATION = 7;
-    public static final int EXIT = 8;
+  public static final int ADD = 0;
+  public static final int DOWNLOAD = 1;
+  public static final int STOP = 2;
+  public static final int UP = 3;
+  public static final int DOWN = 4;
+  public static final int CLEAR = 5;
+  public static final int OPTION = 6;
+  public static final int INFORMATION = 7;
+  public static final int EXIT = 8;
 }

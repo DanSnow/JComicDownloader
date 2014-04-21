@@ -9,8 +9,8 @@ package jcomicdownloader.enums;
  * @author Administrator
  */
 public class FileFormatEnum {
-    public static final int TEXT = 0;
-    public static final int HTML_WITHOUT_PIC = 1;
-    public static final int HTML_WITH_PIC = 2;
-    public static final int EPUB = 3;
+  public static final int TEXT = 0;
+  public static final int HTML_WITHOUT_PIC = 1;
+  public static final int HTML_WITH_PIC = 2;
+  public static final int EPUB = 3;
 }

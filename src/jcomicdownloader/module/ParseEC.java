@@ -133,7 +133,7 @@ public class ParseEC extends ParseOnlineComicSite {
     int ch = Integer.parseInt( chString.split( "-" )[0] );
     String code = "";
     int cid = 0;
-    for(int i = 0;i < allcodes.length() / 50;i++) {
+    for(int i = 0; i < allcodes.length() / 50; i++) {
       if(Integer.parseInt(subStringAndRemoveAlpha(allcodes, i * 50, 4)) == ch) {
         code = subString(allcodes, i * 50, 50);
         cid = i;
@@ -151,7 +151,7 @@ public class ParseEC extends ParseOnlineComicSite {
     String num = subStringAndRemoveAlpha(code, 0, 4);
     String sid = subStringAndRemoveAlpha(code, 4, 2);
     String did = subStringAndRemoveAlpha(code, 6, 1);
-    for (int p = 1;p <= totalPage;p++) {
+    for (int p = 1; p <= totalPage; p++) {
       String img = "";
       if (p < 10) {
         img = "00" + p;
