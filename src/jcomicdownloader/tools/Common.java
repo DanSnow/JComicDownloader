@@ -7,7 +7,7 @@
  ChangeLog:
  5.15: 將輸出位址文件檔檔名後面加_urls＞
  5.13: 增加以simpleDownload下載的mandFile download
- 5.12: 
+ 5.12:
  1. 修正連線錯誤時stateBar的文字顯示。
  2. 修正下載機制，若連線錯誤則至少重試一次。
  3. 增加暫停時倒數秒數的文字顯示。
@@ -127,7 +127,7 @@ public class Common
 
     public static void debugPrintln( String print )
     { // for debug
-        print = Common.getStringUsingDefaultLanguage( print, print ); // 使用預設語言 
+        print = Common.getStringUsingDefaultLanguage( print, print ); // 使用預設語言
 
         if ( Debug.debugMode )
         {
@@ -137,7 +137,7 @@ public class Common
 
     public static void debugPrint( String print )
     { // for debug
-        print = Common.getStringUsingDefaultLanguage( print, print ); // 使用預設語言 
+        print = Common.getStringUsingDefaultLanguage( print, print ); // 使用預設語言
 
         if ( Debug.debugMode )
         {
@@ -538,7 +538,7 @@ public class Common
                 connection.setRequestProperty( "User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.97 Safari/537.11" );
                 //connection.setRequestProperty( "User-Agent", "Mozilla/5.0 (Windows; U; Windows NT 6.1; zh-TW; rv:1.9.2.8) Gecko/20100722 Firefox/3.6.8" );
 
-                // connection.setRequestMethod( "GET" ); // 默认是GET 
+                // connection.setRequestMethod( "GET" ); // 默认是GET
                 //connection.setRequestProperty( "User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows 2000)" );
                 //connection.setRequestProperty("User-Agent","Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; InfoPath.1; CIBA)");
                 //connection.setFollowRedirects( true );
@@ -546,7 +546,7 @@ public class Common
                 connection.setDoInput( true ); //
 
                 // dm5加這一行無法下載...
-                //connection.setUseCaches( false ); // // Post 请求不能使用缓存 
+                //connection.setUseCaches( false ); // // Post 请求不能使用缓存
                 connection.setAllowUserInteraction( false );
 
                 //connection.setInstanceFollowRedirects( false ); // 不轉址
@@ -555,10 +555,10 @@ public class Common
                 if ( referURL != null && !referURL.equals( "" ) )
                 {
                     //Common.debugPrintln( "設置Referer=" + referURL );
-                    connection.setRequestProperty( "Referer", "referURL" );
+                    connection.setRequestProperty( "Referer", referURL);
                 }
 
-                // 设定传送的内容类型是可序列化的java对象   
+                // 设定传送的内容类型是可序列化的java对象
                 // (如果不设此项,在传送序列化对象时,当WEB服务默认的不是这种类型时可能抛java.io.EOFException)
                 connection.setRequestProperty( "Content-Type", "application/x-www-form-urlencoded" );
                 //connection.setRequestProperty( "Accept-Language", "zh-cn" );
@@ -602,7 +602,7 @@ public class Common
 
                     tryConnect( connection );
                 }
-                // 內部伺服器發生錯誤，讀取getErrorStream() 
+                // 內部伺服器發生錯誤，讀取getErrorStream()
                 if ( connection.getResponseCode() == 500 )
                 {
                 }
@@ -678,7 +678,7 @@ public class Common
                                 + CommonGUI.stateBarDetailMessage
                                 + " : " + downloadText );
                     }
-                }
+                  }
 
                 is.close();
                 os.flush();
@@ -2296,7 +2296,7 @@ public class Common
                 pb.redirectErrorStream( true );
                 final Process p = pb.start();
 
-                //read the standard output 
+                //read the standard output
                 stdout = new BufferedReader( new InputStreamReader( p.getInputStream() ) );
                 String line = "";
                 while ( (line = stdout.readLine()) != null )
