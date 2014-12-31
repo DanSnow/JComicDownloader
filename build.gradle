@@ -1,0 +1,25 @@
+apply plugin: 'groovy'
+apply plugin:'application'
+
+mainClassName = "jcomicdownloader.ComicDownGUI"
+
+repositories {
+  mavenCentral()
+}
+
+jar {
+  manifest {
+    attributes 'Implementation-Title': 'JComicDownloader',
+            'Implementation-Version': '5.19.2',
+            'Main-Class': 'jcomicdownloader.ComicDownGUI'
+  }
+  baseName = "JComicDownloader"
+  from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+  version = "5.19.2"
+}
+
+dependencies {
+  groovy 'org.codehaus.groovy:groovy-all:1.8.6'
+  groovy 'org:jaudiotagger:2.0.3'
+}
+
